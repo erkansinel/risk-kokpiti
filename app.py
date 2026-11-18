@@ -21,7 +21,10 @@ st.set_page_config(page_title="Likidite Kokpiti", page_icon="📊", layout="wide
                    initial_sidebar_state="collapsed")
 st.markdown(CSS, unsafe_allow_html=True)
 
-VARSAYILAN_YOL = r"C:\Programlarim\montecarlo\montecarlo_veri\Likidite_Sablonu.xlsx"
+# Varsayılan Excel: önce uygulama klasörü, sonra eski veri klasörü
+_ADAYLAR = [os.path.join(os.path.dirname(os.path.abspath(__file__)), "Likidite_Sablonu.xlsx"),
+            r"C:\Programlarim\montecarlo\montecarlo_veri\Likidite_Sablonu.xlsx"]
+VARSAYILAN_YOL = next((p for p in _ADAYLAR if os.path.exists(p)), _ADAYLAR[0])
 AYLAR = ["Oca", "Şub", "Mar", "Nis", "May", "Haz", "Tem", "Ağu", "Eyl", "Eki", "Kas", "Ara"]
 PLOT_CFG = {"displayModeBar": False, "responsive": True}
 

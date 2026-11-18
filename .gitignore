@@ -1,6 +1,6 @@
-__pycache__/
-.pytest_cache/
 *.log
 *.zip
+.pytest_cache/
 .venv/
+__pycache__/
 ~$*.xlsx

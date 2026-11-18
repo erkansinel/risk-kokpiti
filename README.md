@@ -3,11 +3,14 @@
 Monte Carlo yöntemiyle nakit akışı stres testi. Şirketin Excel'deki verisinden binlerce senaryo üretir ve şu soruları cevaplar: nakit ne zaman tükenir, ne kadar ek kaynak gerekir, mevcut limitler ve yönetim aksiyonları yeterli mi?
 
 ## Kurulum ve çalıştırma
+**Windows:** `Risk_Kokpiti_Baslat.bat` dosyasına çift tıklayın. İlk açılışta Python sanal ortamı kurulur (birkaç dakika), sonraki açılışlar hızlıdır. Bilgisayarda Python 3.10+ kurulu olmalıdır.
+
+**Elle:**
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
-Uygulama `C:\Programlarim\montecarlo\montecarlo_veri\Likidite_Sablonu.xlsx` dosyasını arar. Dosya yoksa örnek veriyle açılır. Ekrandan başka bir Excel de yüklenebilir.
+Uygulama önce kendi klasöründeki `Likidite_Sablonu.xlsx` dosyasını açar. Dosya yoksa örnek veriyle başlar; ekrandan başka bir Excel de yüklenebilir.
 
 ## Dosyalar
 | Dosya | Görev |
